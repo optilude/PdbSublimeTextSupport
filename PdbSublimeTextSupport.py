@@ -7,8 +7,7 @@ def launch(self):
     frame, lineno = self.stack[self.curindex]
     filename = self.canonic(frame.f_code.co_filename)
     if exists(filename):
-        url = "sblm://%s%%3A%d" % (filename, lineno,)
-        command = 'subl -b --command \'open_protocol_url {"url": "%s"}\'' % (url,)
+        command = 'subl -b "%s:%d"' % (filename, lineno)
         os.system(command)
 
 def preloop(self):

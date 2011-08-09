@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name = 'PdbSublimeTextSupport',
-      version = '0.1',
+      version = '0.2',
       description = 'Display source code in Sublime Text 2 while debugging with pdb.',
       keywords = 'sublimetext pdb',
       author = 'Martin Aspeli',
@@ -32,7 +32,7 @@ setup(name = 'PdbSublimeTextSupport',
 
               $ python setup.py install
 
-          Next you need to hook up ``pdb`` with this module by add the
+          Next you need to hook up ``pdb`` with this module by adding the
           following to your ``.pdbrc`` file, which you can create in your home
           directory if it's not there already::
 
@@ -40,12 +40,6 @@ setup(name = 'PdbSublimeTextSupport',
               pdb.Pdb.preloop = preloop
               pdb.Pdb.precmd = precmd
           
-          Next, you need to install the `SublimeProtocol Sublime Text 2 plugin
-          <https://gist.github.com/1074202>`_. Download this and place the
-          file ``createsublimelink.py`` in the Sublime Text 2 ``Packages/``
-          directory (go to the menu item  Sublime Text 2 -> Preferences ->
-          Browse Packages in Sublime Text to find) it.
-
           Finally, ensure that you have the ``subl`` command line tool has
           been installed as per `these instructions
           <http://www.sublimetext.com/docs/2/osx_command_line.html>`_.
