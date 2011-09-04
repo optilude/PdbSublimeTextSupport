@@ -24,13 +24,18 @@ setup(name = 'PdbSublimeTextSupport',
           'Topic :: Text Editors',
       ],
       long_description = """\
-          This module is used to hook up ``pdb``, the python debugger, with Sublime Text 2,
-          enabling it to display the debugged source code during a ``pdb`` session.
+          This module is used to hook up``pdb``, the python debugger, with
+          Sublime Text 2, enabling it to display the debugged source code during
+          a``pdb``session.
 
           After downloading and unpacking the package, you should install the
           helper module using::
 
               $ python setup.py install
+
+          You can also do this with ``easy_install``:
+          
+              $ easy_install -U PdbSublimeTextSupport
 
           Next you need to hook up ``pdb`` with this module by adding the
           following to your ``.pdbrc`` file, which you can create in your home
